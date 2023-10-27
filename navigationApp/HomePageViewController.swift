@@ -16,7 +16,6 @@ class HomePageViewController: UIViewController, FirstVCDelegate{
         view.backgroundColor = color
     }
     
-    
     let buttonStackView: UIStackView = {
         let stackView = UIStackView()
         
@@ -31,7 +30,6 @@ class HomePageViewController: UIViewController, FirstVCDelegate{
         setUpButtonStackView()
         presentButton.addTarget(self, action: #selector(pushButtonTapped), for: .touchUpInside)
         pushbutton.addTarget(self, action: #selector(presentButtonTapped), for: .touchUpInside)
-
         
         view.backgroundColor = .white
     }
@@ -74,7 +72,6 @@ class HomePageViewController: UIViewController, FirstVCDelegate{
         
         buttonStackView.addArrangedSubview(pushButton)
         buttonStackView.addArrangedSubview(presentButton)
-
         
         view.addSubview(buttonStackView)
         

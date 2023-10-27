@@ -72,7 +72,6 @@ class SignInViewController: UIViewController {
         signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
     }
     
-    
     @objc func signInButtonTapped() {
         if  emailTextField?.text?.isEmpty == false && passwordTextField?.text?.isEmpty == false {
             let homePageViewController = HomePageViewController()
@@ -194,9 +193,7 @@ class SignInViewController: UIViewController {
             signInButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50.5),
             signInButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50.5),
             signInButton.heightAnchor.constraint(equalToConstant: 45)
-            
         ])
-        
     }
     
     func setUpLineView() {
@@ -236,6 +233,7 @@ class SignInViewController: UIViewController {
             presentThirdStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60.5),
         ])
     }
+    
     func setUpAppsView() {
         
         presentFourthStackView.axis = .horizontal
@@ -273,28 +271,24 @@ class SignInViewController: UIViewController {
         presentFifthStackView.alignment = .center
         presentFifthStackView.distribution = .equalSpacing
         presentFifthStackView.spacing = 8
-        // Create the first label ("Don't have an account.")
+        
         let label1 = UILabel()
         label1.text = "Don't have an account."
         label1.textColor = UIColor(hexString: "#5F5F5F")
         label1.font = UIFont.systemFont(ofSize: 12)
         label1.sizeToFit()
         
-        // Create the second label ("Sign Up")
         let label2 = UILabel()
         label2.text = "Sign Up"
         label2.textColor = UIColor(hexString: "#22577A")
         label2.font = UIFont.systemFont(ofSize: 12)
         label2.sizeToFit()
         
-        // Add the labels to the stack view
         presentFifthStackView.addArrangedSubview(label1)
         presentFifthStackView.addArrangedSubview(label2)
         
-        // Add the label stack view to the view hierarchy
         view.addSubview(presentFifthStackView)
         
-        // Create Auto Layout constraints for the label stack view
         presentFifthStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             presentFifthStackView.topAnchor.constraint(equalTo: presentFourthStackView.bottomAnchor, constant: 65), // Offset from the stack view above
@@ -302,9 +296,7 @@ class SignInViewController: UIViewController {
             presentFifthStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -95),
         ])
     }
-    
 }
-    
 
 
 extension UIColor {
